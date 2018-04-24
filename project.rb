@@ -7,7 +7,7 @@ opens new file with second argument and copies first argument over
 moving class to beginning and removing "Triceps skin fold thickness (mm)" column
 adds column and takes age in years and converts to age in days
 =end
-CSV.open(ARGV[1], "w+") do |csv|
+# CSV.open(ARGV[1], "w+") do |csv|
   i = 0
   table.each do |line|
     new_line = ''
@@ -16,8 +16,7 @@ CSV.open(ARGV[1], "w+") do |csv|
       i += 1
     else
       new_line = line[8].to_i*365
-      # i += 1
     end
-    csv << [line[9], line[0], line[1], line[2], line[3], line[5], line[6], line[7], line[8], new_line]
+    puts [line[9], line[0], line[1], line[2], line[3], line[5], line[6], line[7], line[8], new_line].inspect
   end
-end
+# end
