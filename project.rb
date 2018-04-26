@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby -w
 require 'csv'
 
+
 table = CSV.read(ARGV[0])
 =begin
 opens new file with second argument and copies first argument over 
@@ -17,6 +18,6 @@ adds column and takes age in years and converts to age in days
     else
       new_line = line[8].to_i*365
     end
-    puts [line[9], line[0], line[1], line[2], line[3], line[5], line[6], line[7], line[8], new_line].inspect
+    print [line[9], line[0], line[1], line[2], line[3], line[5], line[6], line[7], line[8], new_line].to_csv
   end
 # end
