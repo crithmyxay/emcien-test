@@ -24,5 +24,9 @@ adds column and takes age in years and converts to age in days
     end
     print [line[9], line[0], line[1], line[2], line[3], line[5], line[6], line[7], line[8], new_line].to_csv
   end
-# end
+# # end
 STDERR.puts "#{i} lines have been parsed"
+
+# CSV.foreach(ARGV[0]) do |row|
+#   print row
+# end
