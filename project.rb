@@ -17,7 +17,12 @@ adds column and takes age in years and converts to age in days
       i += 1
     else
       new_line = line[8].to_i*365
+      i += 1
+    end
+    if i % 100 == 0
+      STDERR.puts "#{i} lines have been parsed"
     end
     print [line[9], line[0], line[1], line[2], line[3], line[5], line[6], line[7], line[8], new_line].to_csv
   end
 # end
+STDERR.puts "#{i} lines have been parsed"
